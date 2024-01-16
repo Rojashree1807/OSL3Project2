@@ -16,7 +16,7 @@ namespace WebAppPro2.Controllers
         [HttpGet]
         public IActionResult create()
         {
-            return View(new Pizza { });
+            return View(new Pizza ());
         }
         [HttpPost]
         public IActionResult Create(Pizza piz)
@@ -64,14 +64,8 @@ namespace WebAppPro2.Controllers
             return RedirectToAction("Checkout");
 
         }
-
-
         public IActionResult Checkout()
         {
-
-            //var found = orderdetails.Find(p => p.OrderId == orderid);
-
-            //Console.WriteLine(orderdetails); 
             return View(orderdetails);
 
         }
